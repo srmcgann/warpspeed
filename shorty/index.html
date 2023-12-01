@@ -18,6 +18,13 @@
     </style>
   </head>
   <body>
-    <iframe src="https://warpspeed.000webhostapp.com/shorty"></iframe>
+    <iframe src="https://warpspeed.000webhostapp.com/shorty" id="mainFrame"></iframe>
+    <script>
+      if(location.href.indexOf('slug=')!=-1){
+        slug = location.href.split('slug=')[1].split('&')[0]
+        el = document.querySelector('#mainFrame')
+        el.src = 'https://warpspeed.000webhostapp.com/shorty/' + slug 
+      }
+    </script>
   </body>
 </html>
